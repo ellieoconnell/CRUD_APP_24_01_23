@@ -1,9 +1,9 @@
 -- creating a database table 
 CREATE TABLE IF NOT EXISTS orders (
     order_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    first_name VARCHAR(10) NO NULL,
-    drink_type VARCHAR(15) NO NULL,
-    drink_size VARCHAR(10) NO NULL,
+    first_name VARCHAR(10) NOT NULL,
+    drink_type VARCHAR(15) NOT NULL,
+    drink_size VARCHAR(10) NOT NULL,
     cream BOOLEAN NOT NULL,
     drink_amount INT NOT NULL
 );

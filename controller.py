@@ -1,5 +1,5 @@
-from service import service
-from db import db
+import service
+import db
 
 # defining while loop that loops through all menu options
 def startApp():
@@ -24,8 +24,8 @@ def startApp():
             db.commitChanges()
 
 # defining the function called when the user selects option 1 
-def orderInput():
-    return service.createOrder()
+def orderInput(first_name, drink_types, drink_size, cream, drink_amount):
+    return service.createOrder(first_name, drink_types, drink_size, cream, drink_amount)
 
 # defining the function called when the user selects option 2
 def oneOrder():
@@ -56,7 +56,7 @@ menu = (
     Welcome to the QA Cafe, what would you like to do? 
     1. Create an order
     2. Read an order
-    3. Read all Orders
+    3. Read all orders
     4. Update an order
     5. Delete an order
     6. Delete all orders
