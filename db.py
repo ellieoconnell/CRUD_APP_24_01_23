@@ -37,7 +37,7 @@ def check_all_records():
 
 # defining function that allows users to navigate through the table by id
 def find_orders_id(id):
-    query = f"SELECT order_id FROM orders WHERE order_id = {id};"
+    query = f"SELECT * FROM orders WHERE order_id = {id};"
     data = run_query(query)
     return data
 

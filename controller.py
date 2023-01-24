@@ -24,8 +24,13 @@ def startApp():
             db.commitChanges()
 
 # defining the function called when the user selects option 1 
-def orderInput(first_name, drink_types, drink_size, cream, drink_amount):
-    return service.createOrder(first_name, drink_types, drink_size, cream, drink_amount)
+def orderInput():
+    name = input("Please enter name of customer: ")
+    drink = input("Please enter the type of drink the customer wants: ")
+    size = input("Please enter the size of the drink the customer wants: ")
+    extra = input("Did the customer want cream?: ")
+    amount = input("How many drinks did the customer order?: ")
+    return service.createOrder(name, drink, size, extra, amount)
 
 # defining the function called when the user selects option 2
 def oneOrder():
