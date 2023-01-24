@@ -2,6 +2,7 @@ import db
 
 # defining the create order function by pulling the function from the db file
 def createOrder(first_name, drink_types, drink_size, cream, drink_amount):
+    print(first_name)
     data = db.create_order(first_name, drink_types, drink_size, cream, drink_amount)
     return data
 
@@ -26,7 +27,7 @@ def delAll():
     return data
 
 # defining the update orders by id function by pulling the function from the db file
-def updateOne(id):
-    data = db.update_by_id(id)
+def updateOne(id,first_name, drink_types, drink_size, cream, drink_amount):
+    data = db.update_by_id(id, first_name, drink_types, drink_size, cream, drink_amount)
     return data 
   
