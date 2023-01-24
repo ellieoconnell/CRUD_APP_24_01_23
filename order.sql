@@ -1,4 +1,4 @@
--- creating a databade table 
+-- creating a database table 
 CREATE TABLE IF NOT EXISTS orders (
     order_id INTEGER PRIMARY KEY AUTOINCREMENT,
     first_name VARCHAR(10) NO NULL,
