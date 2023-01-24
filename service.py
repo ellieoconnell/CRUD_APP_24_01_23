@@ -1,8 +1,8 @@
 import db
 
 # defining the create order function by pulling the function from the db file
-def createOrder():
-    data = db.create_order()
+def createOrder(first_name, drink_types, drink_size, cream, drink_amount):
+    data = db.create_order(first_name, drink_types, drink_size, cream, drink_amount)
     return data
 
 # defining the get all function by pulling the function from the db file
