@@ -28,7 +28,7 @@ def orderInput():
     name = input("Please enter name of customer: ")
     drink = input("Please enter the type of drink the customer wants: ")
     size = input("Please enter the size of the drink the customer wants: ")
-    extra = input("Did the customer want cream?: ")
+    extra = input("Did the customer want cream? True or False: ")
     amount = input("How many drinks did the customer order?: ")
     return service.createOrder(name, drink, size, extra, amount)
 
@@ -44,7 +44,12 @@ def allOrders():
 # defining the function called when the user selects option 4
 def orderUpdate():
     id = input("Please enter id to update: ")
-    return service.updateOne(id)
+    name = input("Please enter new name of customer: ")
+    drink = input("Please enter the new type of drink the customer wants: ")
+    size = input("Please enter the new size of the drink the customer wants: ")
+    extra = input("Did the customer want cream? True or False: ")
+    amount = input("How many drinks did the customer order?: ")
+    return service.updateOne(id, name, drink, size, extra, amount)
 
 # defining the function called when the user selects option 5
 def oneOrderdel():

@@ -25,9 +25,9 @@ def run_query(query):
 
 # defining function that allows the user to input new orders into a table
 def create_order(first_name, drink_type, drink_size, cream, drink_amount):
-    query = f"INSERT INTO orders (first_name, drink_type, drink_size, cream, drink_amount) VALUES ({first_name}, {drink_type}, {drink_size}, {cream}, {drink_amount});"
-    run_query(query)
-    return True
+    query = f"INSERT INTO orders (first_name, drink_type, drink_size, cream, drink_amount) VALUES ('{first_name}', '{drink_type}', '{drink_size}', {cream}, {drink_amount});"
+    data = run_query(query)
+    return data
 
 # defining function that can read all the data from the db table upon request
 def check_all_records():
@@ -55,7 +55,7 @@ def del_all_orders():
 
 # defining function that allows user to update orders by id 
 def update_by_id(first_name, drink_types, drink_size, cream, drink_amount, id):
-    query = f"UPDATE orders SET first_name = {first_name}, drink_type = {drink_types}, drink_size = {drink_size}, cream = {cream}, drink_amount = {drink_amount} WHERE order_id = {id};"
+    query = f"UPDATE orders SET first_name = '{first_name}', drink_type = '{drink_types}', drink_size = '{drink_size}', cream = {cream}, drink_amount = {drink_amount} WHERE order_id = {id};"
     data = run_query(query)
     return data
 
