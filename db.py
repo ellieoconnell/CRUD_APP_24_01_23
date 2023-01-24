@@ -34,13 +34,13 @@ def check_all_records():
     return True
 
 # defining function that allows users to navigate through the table by id
-def find_orders_id():
+def find_orders_id(id):
     query = "SELECT order_id FROM orders_db WHERE orders_id = {id};"
     data = run_query(query)
     return True
 
 # defining function that allows users to delete entries by id
-def del_orders_id():
+def del_orders_id(id):
     query = "DELETE FROM orders WHERE order_id = {id};"
     data = run_query(query)
     return True
@@ -52,12 +52,12 @@ def del_all_orders():
     return True
 
 # defining function that allows user to update orders by id 
-def update_by_id():
+def update_by_id(id):
     query = "UPDATE orders_db SET first_name = {first_name}, drink_type = {drink_types}, drink_size = {drink_size}, cream = {cream}, drink_amount = {drink_amount} WHERE order_id = {id};"
     data = run_query(query)
     return True
 
-# defining function to commit all changed to db when they are made 
+# defining function to commit all changes to db when they are made 
 def commitChanges():
     set_up_conn.commit()
 
